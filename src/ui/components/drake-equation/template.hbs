@@ -1,0 +1,19 @@
+<div>
+<div class="header"><h3>The number of civilizations in the Milky Way Galaxy whose electromagnetic emissions are detectable.</h3>
+<span>Estimated using <a href="https://en.wikipedia.org/wiki/Drake_equation" target="_blank">Drake equation</a>.</span>
+</div>
+<h1 class="result">{{result}}</h1>
+<table>
+	<tr><td><div class="variablefield"><input type="number" min="1" value={{starformation}} onchange={{action updateStarformation}}></div></td><td><div class="variableDescription">The rate of formation of stars suitable for the development of intelligent life.</div></td></tr>
+
+	<tr><td><div class="variablefield"><input type="range" value={{planetarysystems}} onchange={{action updatePlanetarysystems}}  min="1" max="100" step="1"></div></td><td><div class="variableDescription">The fraction of those stars with planetary systems.</div></td></tr>
+	<tr><td><div class="variablefield"><input type="number" min="0" value={{planets}} onchange={{action updatePlanets}}></div></td><td><div class="variableDescription">The number of planets, per solar system, with an environment suitable for life.</div></td></tr>
+
+	<tr><td><div class="variablefield"><input type="range" value={{life}} onchange={{action updateLife}}  min="1" max="100" step="1"></div></td><td><div class="variableDescription">The fraction of suitable planets on which life actually appears.</div></td></tr>
+
+	<tr><td><div class="variablefield"><input type="range" value={{intelligence}} onchange={{action updateIntelligence}}  min="1" max="100" step="1"></div></td><td><div class="variableDescription">The fraction of life bearing planets on which intelligent life emerges.</div></td></tr>
+	<tr><td><div class="variablefield"><input type="range" value={{technology}} onchange={{action updateTechnology}}  min="1" max="100" step="1"></div></td><td><div class="variableDescription">The fraction of civilizations that develop a technology that releases detectable signs of their existence into space.</div></td></tr>
+	<tr><td><div class="variablefield"><input placeholder="years" type="number" min="1" value={{time}} onchange={{action updateTime}}></div></td><td><div class="variableDescription">The length of time (years) such civilizations release detectable signals into space.</div></td></tr>
+
+</table>
+</div>
