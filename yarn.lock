@@ -166,7 +166,7 @@
     handlebars "^4.0.6"
     simple-html-tokenizer "^0.3.0"
 
-"@glimmer/test-helpers@^0.30.0":
+"@glimmer/test-helpers":
   version "0.30.0"
   resolved "https://registry.yarnpkg.com/@glimmer/test-helpers/-/test-helpers-0.30.0.tgz#acab0d6773d52ed1140a7bb8681fb9f26adf0b64"
 
@@ -1272,7 +1272,7 @@ broccoli-slow-trees@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/broccoli-slow-trees/-/broccoli-slow-trees-2.0.0.tgz#9741afe992787add64aec7f7c8211dfcc058278d"
 
-broccoli-slow-trees@^3.0.1:
+broccoli-slow-trees@^3.0.1, broccoli-slow-trees@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/broccoli-slow-trees/-/broccoli-slow-trees-3.0.1.tgz#9bf2a9e2f8eb3ed3a3f2abdde988da437ccdc9b4"
   dependencies:
@@ -1389,6 +1389,26 @@ broccoli@^1.1.0:
     rsvp "^3.0.17"
     sane "^1.4.1"
     tmp "0.0.28"
+    underscore.string "^3.2.2"
+
+broccoli@^1.1.2:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/broccoli/-/broccoli-1.1.3.tgz#98405e86b7b0e6c268fb8302a006d834d17ed292"
+  dependencies:
+    broccoli-node-info "1.1.0"
+    broccoli-slow-trees "3.0.1"
+    broccoli-source "^1.1.0"
+    commander "^2.5.0"
+    connect "^3.3.3"
+    copy-dereference "^1.0.0"
+    findup-sync "^1.0.0"
+    handlebars "^4.0.4"
+    heimdalljs-logger "^0.1.7"
+    mime "^1.2.11"
+    rimraf "^2.4.3"
+    rsvp "^3.5.0"
+    sane "^1.4.1"
+    tmp "0.0.31"
     underscore.string "^3.2.2"
 
 browser-resolve@^1.11.0:
@@ -4898,6 +4918,12 @@ tmp@^0.0.29:
 tmp@0.0.28:
   version "0.0.28"
   resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.28.tgz#172735b7f614ea7af39664fa84cf0de4e515d120"
+  dependencies:
+    os-tmpdir "~1.0.1"
+
+tmp@0.0.31:
+  version "0.0.31"
+  resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.31.tgz#8f38ab9438e17315e5dbd8b3657e8bfb277ae4a7"
   dependencies:
     os-tmpdir "~1.0.1"
 

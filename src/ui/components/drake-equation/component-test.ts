@@ -10,4 +10,13 @@ module('Component: drake-equation', function(hooks) {
     await this.render(hbs`<drake-equation />`);
     assert.ok(this.containerElement.querySelector('div'));
   });
+
+  test('Default values', async function(assert){
+
+    await this.render(hbs`<drake-equation />`);
+
+   // assert.equal(find('.planetarySystems').value(), '50');
+
+
+  });
 });
