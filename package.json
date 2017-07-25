@@ -32,7 +32,8 @@
     "ember-cli-uglify": "^2.0.0-beta.1",
     "qunitjs": "^2.3.3",
     "typescript": "^2.2.2",
-    "babel-plugin-glimmer-inline-precompile": "^1.2.0"
+    "babel-plugin-glimmer-inline-precompile": "^1.2.0",
+    "babel-plugin-external-helpers": "^6.22.0"
   },
   "engines": {
     "node": ">= 4.0"
