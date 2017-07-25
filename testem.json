@@ -5,5 +5,17 @@
   "serve_files": ["index.js"],
   "disable_watching": true,
   "launch_in_dev": ["Chrome"],
-  "launch_in_ci": ["Firefox", "Chrome"]
+  "launch_in_ci": ["Firefox", "Chrome"],
+  "browser_start_timeout": 60,
+  "browser_args": {
+        "Chrome": [
+            "--disable-web-security",
+            "--disable-gpu",
+            "--headless",
+            "--incognito",
+            "--no-sandbox",
+            "--remote-debugging-address=0.0.0.0",
+            "--remote-debugging-port=9222"
+        ]
+    }
 }
