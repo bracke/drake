@@ -14,7 +14,7 @@ module('Component: drake-equation', function(hooks) {
   test('Default values', async function(assert){
 
     await this.render(hbs`<drake-equation />`);
-
+assert.ok(this.containerElement.querySelector('div'));
    // assert.equal(find('.planetarySystems').value(), '50');
 
 
