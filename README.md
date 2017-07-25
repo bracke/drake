@@ -1,7 +1,12 @@
 # Drake equation
+The Drake equation is used to arrive at an estimate of the number of active, communicative extraterrestrial civilizations in the Milky Way galaxy.
 
-This README outlines the details of collaborating on this Glimmer application.
-A short introduction of this app could easily go here.
+This project implements the Drake equation as a Glimmerjs component that allows you to experiment.
+
+[Demo](https://bracke.github.io/drake/index.html)
+
+
+The following outlines the details of collaborating on this Glimmer application.
 
 ## Prerequisites
 
