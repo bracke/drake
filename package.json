@@ -1,7 +1,7 @@
 {
   "name": "drake",
-  "version": "0.0.0",
-  "description": "A brand new Glimmer app.",
+  "version": "1.0.0",
+  "description": "A glimmer component that implements the Drake equation allowing you to experiment.",
   "directories": {
     "doc": "doc",
     "test": "tests"
