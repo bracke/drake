@@ -3,47 +3,45 @@ dist: trusty
 addons:
   apt:
     sources:
-      - google-chrome
+    - google-chrome
     packages:
-      - google-chrome-stable
+    - google-chrome-stable
 language: node_js
 node_js:
-  - "7"
+- '7'
 env:
-    - EMBER_VERSION=default
-    - EMBER_VERSION=release
-    - EMBER_VERSION=beta
-    - EMBER_VERSION=canary
+  matrix:
+  - EMBER_VERSION=default
+  - EMBER_VERSION=release
+  - EMBER_VERSION=beta
+  - EMBER_VERSION=canary
+  global:
+    secure: FOfv9pwzbcEM2piS84CVUELPkKNAE+t4ExQ+UPrP4sJOlcGWO6jMCxSTAZh4bCOwfKMLfNBLOaBAmQ5pShHxO3UX0iLpfN49ItwD3adN9qpC0v+MddIfUvN7bmDn+6hl2Yeb5n9p0Xxg0iptpCh7I6C+N9sBY/GFygIk2kQjZqBOO5fQELcJFICqpRMF5ZwbtkFE4FfsVTtvCejLlA5x+KhjWurZOeDt0LnN6R3q/l/ECl/XJkFw8J0N+ivwrcSd5NHuZsfglW0HBcpr+VL8Cc1aOVUAPaDwWW7MoZhgBvdJ7F5ed9gg+5mwS78s+SyNiDL0MD7BNnpB78wer8UutN8NQ1eh/2lwYqYa+9kHq1Ov6XSXG5WD/w3wpf1N1b3HdyfHCeFcUNS0tZlxZgKdRq0Gr/djRofyNStBzQ3m/XcKNZ8N8NFWRGaHSX2VYy8of6Hwxwk3+dpJINAcBKwvP8XFMR8kbwN5KJt2v9d77UYcWQ4OxaH4OK7xDCnUq24yUeQFWORT4o0+huFveVrRFD4sMQYgntOqa+K8bBGzd3I5ovzt4F8qSMH8YkJgiXlq7rfKIBD3EFXJaL5w3eLwLPgF3V3a994OGOex0rhDUQ6lQn9st34rNYORDwARPwHHqGiOGf65AJ6bp0sIw7lyfVPGvQISeuqx7e2pLtic5pg=
 matrix:
   fast_finish: true
   allow_failures:
-    - env: EMBER_VERSION=release
-    - env: EMBER_VERSION=beta
-    - env: EMBER_VERSION=canary
-
+  - env: EMBER_VERSION=release
+  - env: EMBER_VERSION=beta
+  - env: EMBER_VERSION=canary
 before_install:
-    # setting the path for phantom.js 2.0.0
-    - export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
-    # starting a GUI to run tests, per https://docs.travis-ci.com/user/gui-and-headless-browsers/#Using-xvfb-to-Run-Tests-That-Require-a-GUI
-    - export DISPLAY=:99.0
-    - sh -e /etc/init.d/xvfb start
-    - "npm config set spin false"
-    - "npm install -g npm@^2"
+- export PATH=/usr/local/phantomjs-2.0.0/bin:$PATH
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- npm config set spin false
+- npm install -g npm@^2
 install:
-    - mkdir travis-phantomjs
-    - wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -O $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
-    - tar -xvf $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -C $PWD/travis-phantomjs
-    - export PATH=$PWD/travis-phantomjs:$PATH
-
-    - npm install
-
+- mkdir travis-phantomjs
+- wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+  -O $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
+- tar -xvf $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -C $PWD/travis-phantomjs
+- export PATH=$PWD/travis-phantomjs:$PATH
+- npm install
 script:
-    - ember b -p
-
+- ember b -p
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: d38125472ea77325a2c40eab01c1de87436483d4
+  github_token: $GITHUB_TOKEN
   local_dir: dist
   target_branch: gh-pages
   on:
