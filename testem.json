@@ -4,7 +4,7 @@
   "src_files": ["src/**/*"],
   "serve_files": ["index.js"],
   "disable_watching": true,
-  "launch_in_dev": ["Chrome"],
+  "launch_in_dev": ["Phantomjs"],
   "launch_in_ci": ["Firefox"],
   "browser_start_timeout": 60,
   "browser_args": {
