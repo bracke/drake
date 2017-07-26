@@ -39,7 +39,7 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
-secure: "gBCzXN8T2+8N/MMB6pxHTiCxYhAKnxK0WCeJ2cb8Pckn/jpAQzZkxj+2dPGDRXdtZRKCVuBm/OwHq4z5hSdhrX2YzqZM1/OmkNC04GPHUKb0ZrNm+gTb+PoLudKw58V35QQD8HILt+0R1aPzMPed2InljhVxPqMX7vtD+Dp3GZ63A1qyuqmDA9cA90oudbVhhMLl/L72h3RoZE5turuspvGni7H+LD4P+fu39gDNRfkeFZNzUWiD4M6Epqpp8cFbLkj3XEf9dsA3/GfvohQ5nfLDqicQFB+CEFlmoLNOUQvkx07U8DU6ydUSG0G4elLtGJ/ZG3DhPwBDVpcB5a0HIxLVxm1oeccfYirrnOFmEqz0DvNZe1it/oWe79UkD11zYTmqMhe8xaGaofavIl+tvMapnf8vpAci+T50JWax8ZXNPBpsw9NTuiUxCDCshEz+LlMHLov/WrPoHwRZ0RDyhCwav48BSIsyx35wcEvoVeg1QkutJWytQTBE3LwMNg5jA/OFOOqQSr5MQl/ltt73Dh+f90QG/dyIejPoTr0YIm5CzX1oz9C2FMThMwfcnDFVKP5MyAShI7iDgPDjeyxPxDchwKLLIFGb6td8u5dmGbkQUV17YnRrH+6bD1Ir6UIOYiY+38cd3EXOGwtPKegW17Z5oWs8JVVnaGiBh+wfUoE="
+  github_token: $GITHUB_TOKEN
   local_dir: dist
   target_branch: gh-pages
   on:
