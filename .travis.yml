@@ -31,7 +31,7 @@ install:
 - npm install
 script:
 - npm update
-- ember b
+- ember b -p
 deploy:
   provider: pages
   skip_cleanup: true
