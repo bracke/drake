@@ -22,7 +22,7 @@
     "@glimmer/web-component": "^0.2.0",
     "@glimmer/wire-format": "^0.26.2",
     "@glimmer/compiler": "^0.26.2",
-    "@glimmer/component": "^0.4.0",
+    "@glimmer/component": "^0.6.0",
     "@types/qunit": "^2.0.31",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-glimmer-inline-precompile": "^1.2.0",
