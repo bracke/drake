@@ -14,6 +14,6 @@ app.registerInitializer({
   }
 });
 
-app.renderComponent('drake-app', containerElement, null);
+app.renderComponent('drake-equation', containerElement, null);
 
 app.boot();
